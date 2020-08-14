@@ -18,6 +18,7 @@ navigator.mediaDevices.getUserMedia({
   myPeer.on('call', call => {
     call.answer(stream)
     const video = document.createElement('video')
+    console.log("new pr");
     call.on('stream', userVideoStream => {
       addVideoStream(video, userVideoStream)
     })
