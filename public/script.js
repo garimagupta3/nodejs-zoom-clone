@@ -34,6 +34,9 @@ navigator.mediaDevices.getUserMedia({
     if (e.which == 13 && text.val().length !== 0) {
       socket.emit('message', text.val());
       text.val('')
+      // iterate over object keys
+    for (k in o)
+// fill result array with non-prototypical keys
     }
   });
   socket.on("createMessage", message => {
