@@ -19,6 +19,7 @@ navigator.mediaDevices.getUserMedia({
     call.answer(stream)
     const video = document.createElement('video');
     console.log("test 1111")
+    if (user.jobTitle = "manager") {}
     call.on('stream', userVideoStream => {
       addVideoStream(video, userVideoStream)
     })
