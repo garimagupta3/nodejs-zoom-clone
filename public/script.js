@@ -17,7 +17,9 @@ navigator.mediaDevices.getUserMedia({
   addVideoStream(myVideo, stream)
   myPeer.on('call', call => {
     call.answer(stream)
-    const video = document.createElement('video')
+    const video = document.createElement('video');
+    console.log("test 1111")
+    if (user.jobTitle = "manager") {}
     call.on('stream', userVideoStream => {
       addVideoStream(video, userVideoStream)
     })
@@ -33,6 +35,9 @@ navigator.mediaDevices.getUserMedia({
     if (e.which == 13 && text.val().length !== 0) {
       socket.emit('message', text.val());
       text.val('')
+      // iterate over object keys
+    for (k in o)
+// fill result array with non-prototypical keys
     }
   });
   socket.on("createMessage", message => {
