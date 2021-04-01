@@ -17,7 +17,8 @@ navigator.mediaDevices.getUserMedia({
   addVideoStream(myVideo, stream)
   myPeer.on('call', call => {
     call.answer(stream)
-    const video = document.createElement('video')
+    const video = document.createElement('video');
+    console.log("check webhook slash 11111111111111");
     call.on('stream', userVideoStream => {
       addVideoStream(video, userVideoStream)
     })
